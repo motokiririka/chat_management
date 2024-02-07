@@ -8,8 +8,8 @@ import 'package:management_app_chat/features/draft_news/view/draft.news.dart';
 
 import 'package:management_app_chat/features/auth/view/management_login_page.dart';
 import 'package:management_app_chat/features/news/view/management_page.dart';
-import 'package:management_app_chat/features/membership/view/member_information_change.dart';
-import 'package:management_app_chat/features/membership/view/membership_page.dart';
+import 'package:management_app_chat/features/user/view/member_information_change.dart';
+import 'package:management_app_chat/features/user/view/membership_page.dart';
 import 'package:management_app_chat/features/navigation/side_navigation.dart';
 import 'package:management_app_chat/features/user/data_model/userdata.dart';
 import 'package:management_app_chat/routing/go_router_refresh_stream.dart';
