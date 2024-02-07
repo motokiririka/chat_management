@@ -5,6 +5,7 @@ import 'package:management_app_chat/component/global_function.dart';
 import 'package:management_app_chat/component/margin.dart';
 import 'package:management_app_chat/features/news/controller/news_controller.dart';
 import 'package:management_app_chat/features/news/data_model/news.dart';
+import 'package:intl/intl.dart';
 
 class ManagementPage extends HookConsumerWidget {
   const ManagementPage({super.key});
@@ -67,14 +68,20 @@ class ManagementPage extends HookConsumerWidget {
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    trailing: ElevatedButton(
-                        onPressed: () {
-                          ref
-                              .read(newsControllerProvider.notifier)
-                              .deleteNews(news.newsId);
-                          showToast("削除しました");
-                        },
-                        child: const Text("削除")),
+                    trailing: Column(
+                      children: [
+                        Text(DateFormat('yyyy年MM月dd日')
+                            .format(news.createdAt.toDate())),
+                        ElevatedButton(
+                            onPressed: () {
+                              ref
+                                  .read(newsControllerProvider.notifier)
+                                  .deleteNews(news.newsId);
+                              showToast("削除しました");
+                            },
+                            child: const Text("削除")),
+                      ],
+                    ),
                   );
                 });
           },

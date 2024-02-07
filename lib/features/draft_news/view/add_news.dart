@@ -4,9 +4,10 @@ import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:management_app_chat/component/global_function.dart';
 import 'package:management_app_chat/component/margin.dart';
-import 'package:management_app_chat/features/management/controller/draft_news_controller.dart';
+import 'package:management_app_chat/features/draft_news/controller/draft_news_controller.dart';
+import 'package:management_app_chat/features/draft_news/data_model/draftnews.dart';
+
 import 'package:management_app_chat/features/news/controller/news_controller.dart';
-import 'package:management_app_chat/features/management/data_model/draftnews.dart';
 
 class AddNewsPage extends HookConsumerWidget {
   AddNewsPage({super.key, required this.draftNews});

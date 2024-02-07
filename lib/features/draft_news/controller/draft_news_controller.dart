@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:management_app_chat/features/management/data_model/draftnews.dart';
-import 'package:management_app_chat/features/management/repo/draft_news_repo.dart';
+import 'package:management_app_chat/features/draft_news/data_model/draftnews.dart';
+import 'package:management_app_chat/features/draft_news/repo/draft_news_repo.dart';
+
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:uuid/uuid.dart';
 

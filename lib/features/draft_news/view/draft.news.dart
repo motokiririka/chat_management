@@ -2,10 +2,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:intl/intl.dart';
 import 'package:management_app_chat/component/margin.dart';
 import 'package:management_app_chat/config/utils/enum/router_enum.dart';
-import 'package:management_app_chat/features/management/controller/draft_news_controller.dart';
-import 'package:management_app_chat/features/management/data_model/draftnews.dart';
+import 'package:management_app_chat/features/draft_news/controller/draft_news_controller.dart';
+import 'package:management_app_chat/features/draft_news/data_model/draftnews.dart';
+
 import 'package:management_app_chat/routing/app_router.dart';
 
 class DraftPage extends HookConsumerWidget {
@@ -70,15 +72,21 @@ class DraftPage extends HookConsumerWidget {
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       ),
-                      trailing: ElevatedButton(
-                        onPressed: () {
-                          if (listNews.isNotEmpty) {
-                            ref
-                                .read(goRouterProvider)
-                                .pushNamed(AppRoute.newsAdd.name, extra: news);
-                          }
-                        },
-                        child: const Text("編集する"),
+                      trailing: Column(
+                        children: [
+                          Text(DateFormat('yyyy年MM月dd日')
+                              .format(news.createdAt.toDate())),
+                          ElevatedButton(
+                            onPressed: () {
+                              if (listNews.isNotEmpty) {
+                                ref.read(goRouterProvider).pushNamed(
+                                    AppRoute.newsAdd.name,
+                                    extra: news);
+                              }
+                            },
+                            child: const Text("編集する"),
+                          ),
+                        ],
                       ));
                 });
           },

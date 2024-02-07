@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:management_app_chat/config/utils/enum/router_enum.dart';
 import 'package:management_app_chat/features/auth/repo/auth_repo.dart';
-import 'package:management_app_chat/features/management/view/add_news.dart';
+import 'package:management_app_chat/features/draft_news/data_model/draftnews.dart';
+import 'package:management_app_chat/features/draft_news/view/add_news.dart';
+import 'package:management_app_chat/features/draft_news/view/draft.news.dart';
 
-import 'package:management_app_chat/features/management/view/draft.news.dart';
 import 'package:management_app_chat/features/auth/view/management_login_page.dart';
 import 'package:management_app_chat/features/news/view/management_page.dart';
 import 'package:management_app_chat/features/membership/view/member_information_change.dart';
@@ -13,8 +14,6 @@ import 'package:management_app_chat/features/navigation/side_navigation.dart';
 import 'package:management_app_chat/features/user/data_model/userdata.dart';
 import 'package:management_app_chat/routing/go_router_refresh_stream.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-
-import '../features/management/data_model/draftnews.dart';
 
 part 'app_router.g.dart';
 

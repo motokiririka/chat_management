@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:management_app_chat/config/utils/keys/firebase_key.dart';
-import 'package:management_app_chat/features/management/data_model/draftnews.dart';
+import 'package:management_app_chat/features/draft_news/data_model/draftnews.dart';
+
 import 'package:management_app_chat/firebase/firebase_instance_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
