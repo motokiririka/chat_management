@@ -58,7 +58,7 @@ extension FirebaseAuthErrorExt on FirebaseAuthError {
       case 'operation-not-allowed':
         return FirebaseAuthError.operationNotAllowed;
       default:
-        return FirebaseAuthError.unknown;
+        return FirebaseAuthError.wrongPassword;
     }
   }
 }
