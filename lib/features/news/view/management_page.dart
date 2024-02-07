@@ -3,8 +3,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:management_app_chat/component/global_function.dart';
 import 'package:management_app_chat/component/margin.dart';
-import 'package:management_app_chat/features/management/controller/news_controller.dart';
-import 'package:management_app_chat/features/management/data_model/news.dart';
+import 'package:management_app_chat/features/news/controller/news_controller.dart';
+import 'package:management_app_chat/features/news/data_model/news.dart';
 
 class ManagementPage extends HookConsumerWidget {
   const ManagementPage({super.key});

@@ -5,10 +5,10 @@ import 'package:management_app_chat/features/auth/repo/auth_repo.dart';
 import 'package:management_app_chat/features/management/view/add_news.dart';
 
 import 'package:management_app_chat/features/management/view/draft.news.dart';
-import 'package:management_app_chat/features/management/view/management_login_page.dart';
-import 'package:management_app_chat/features/management/view/management_page.dart';
-import 'package:management_app_chat/features/management/view/member_information_change.dart';
-import 'package:management_app_chat/features/management/view/membership_page.dart';
+import 'package:management_app_chat/features/auth/view/management_login_page.dart';
+import 'package:management_app_chat/features/news/view/management_page.dart';
+import 'package:management_app_chat/features/membership/view/member_information_change.dart';
+import 'package:management_app_chat/features/membership/view/membership_page.dart';
 import 'package:management_app_chat/features/navigation/side_navigation.dart';
 import 'package:management_app_chat/features/user/data_model/userdata.dart';
 import 'package:management_app_chat/routing/go_router_refresh_stream.dart';
